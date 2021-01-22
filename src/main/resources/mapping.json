@@ -1,0 +1,69 @@
+{
+  "AtlasMapping" : {
+    "jsonType" : "io.atlasmap.v2.AtlasMapping",
+    "dataSource" : [ {
+      "jsonType" : "io.atlasmap.json.v2.JsonDataSource",
+      "id" : "source-77034846-c414-4492-a7d5-4de60c0d89c8",
+      "name" : "source",
+      "description" : "Source document source type: JSON",
+      "uri" : "atlas:json:source-77034846-c414-4492-a7d5-4de60c0d89c8",
+      "dataSourceType" : "SOURCE"
+    }, {
+      "jsonType" : "io.atlasmap.json.v2.JsonDataSource",
+      "id" : "target-2db007fa-4775-4993-b43f-e25619d8480b",
+      "name" : "target",
+      "description" : "Target document target type: JSON",
+      "uri" : "atlas:json:target-2db007fa-4775-4993-b43f-e25619d8480b",
+      "dataSourceType" : "TARGET"
+    } ],
+    "mappings" : {
+      "mapping" : [ {
+        "jsonType" : "io.atlasmap.v2.Mapping",
+        "inputFieldGroup" : {
+          "jsonType" : "io.atlasmap.v2.FieldGroup",
+          "actions" : [ {
+            "delimiter" : " ",
+            "@type" : "Concatenate"
+          } ],
+          "field" : [ {
+            "jsonType" : "io.atlasmap.json.v2.JsonField",
+            "docId" : "source-77034846-c414-4492-a7d5-4de60c0d89c8",
+            "index" : 0,
+            "path" : "/firstName",
+            "fieldType" : "STRING",
+            "name" : "firstName",
+            "userCreated" : false
+          }, {
+            "jsonType" : "io.atlasmap.json.v2.JsonField",
+            "docId" : "source-77034846-c414-4492-a7d5-4de60c0d89c8",
+            "index" : 1,
+            "path" : "/secondName",
+            "fieldType" : "STRING",
+            "name" : "secondName",
+            "userCreated" : false
+          } ]
+        },
+        "inputField" : [ ],
+        "outputField" : [ {
+          "jsonType" : "io.atlasmap.json.v2.JsonField",
+          "docId" : "target-2db007fa-4775-4993-b43f-e25619d8480b",
+          "path" : "/name",
+          "fieldType" : "STRING",
+          "name" : "name",
+          "userCreated" : false
+        } ],
+        "id" : "mapping.150671"
+      } ]
+    },
+    "lookupTables" : {
+      "lookupTable" : [ ]
+    },
+    "constants" : {
+      "constant" : [ ]
+    },
+    "properties" : {
+      "property" : [ ]
+    },
+    "name" : "UI.0"
+  }
+}
